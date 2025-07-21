@@ -5,4 +5,19 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/nuisibook-calendar/',
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'fullcalendar': [
+            '@fullcalendar/react',
+            '@fullcalendar/core',
+            '@fullcalendar/daygrid',
+            '@fullcalendar/timegrid',
+            '@fullcalendar/interaction'
+          ]
+        }
+      }
+    }
+  }
 })

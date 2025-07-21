@@ -22,6 +22,8 @@ const renderEventContent = (eventInfo) => {
 }
 
 function App() {
+  console.log('[App] Initialisation du composant App')
+  
   const [events, setEvents] = useState([
     { 
       title: 'Intervention Client A', 
@@ -115,6 +117,8 @@ function App() {
     return format(new Date(date), 'dd/MM/yyyy HH:mm', { locale: fr })
   }
 
+  console.log('[App] État actuel des événements:', events)
+
   return (
     <div className="calendar-container">
       <header>
@@ -123,6 +127,12 @@ function App() {
       
       <main>
         <FullCalendar
+          onDatesSet={(dateInfo) => {
+            console.log('[FullCalendar] Dates affichées:', dateInfo)
+          }}
+          viewDidMount={(view) => {
+            console.log('[FullCalendar] Vue montée:', view.view.type)
+          }}
           plugins={[dayGridPlugin, interactionPlugin, timeGridPlugin]}
           initialView="dayGridMonth"
           headerToolbar={{
