@@ -5,12 +5,6 @@
   --text-secondary: #666;
 }
 
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
 .calendar-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -20,21 +14,24 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-.fc {
-  --fc-border-color: #e0e0e0;
-  --fc-button-bg-color: var(--primary-color);
-  --fc-button-border-color: var(--primary-color);
-  --fc-button-hover-bg-color: #1565c0;
-  --fc-button-hover-border-color: #1565c0;
-  --fc-button-active-bg-color: #0d47a1;
-  --fc-button-active-border-color: #0d47a1;
-  --fc-today-bg-color: #e3f2fd;
-  --fc-page-bg-color: #ffffff;
-}
-
 header {
   text-align: center;
   margin-bottom: 2rem;
+}
+
+header h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.fc {
+  /* Calendar container */
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  height: 800px !important;
 }
 
 header h1 {
