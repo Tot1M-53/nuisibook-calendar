@@ -4,12 +4,8 @@ import { ThemeProvider, createTheme } from '@mui/material/styles'
 import CssBaseline from '@mui/material/CssBaseline'
 
 // Importation des styles FullCalendar
-import '@fullcalendar/core/main.css'
-import '@fullcalendar/daygrid/main.css'
-import '@fullcalendar/timegrid/main.css'
-import '@fullcalendar/react'
-
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import App from './App.jsx'
 
 const theme = createTheme({
